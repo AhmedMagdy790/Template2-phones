@@ -1,0 +1,398 @@
+/* Colors Var */
+:root {
+    --mine-color: #6e0aef;
+    --color-link: #4e547e;
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn {
+    width: 10rem;
+    margin-top: 3rem;
+    border-radius: 0.5rem;
+    outline: none;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    background-color: #6e0aef;
+}
+
+.btn a {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+.btn:hover {
+    background-color: #7821eb;
+}
+
+/* Start Header */
+
+nav {
+    background-color: #fff;
+    box-shadow: 0 0 10px  #cdcdcd;
+    width: 100%;
+}
+
+nav .nav-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1366px;
+    margin: 0 auto;
+    padding: 1rem 5rem;
+    left: 0;
+    top: 0;
+    z-index: 999;
+}
+
+nav .logo {
+    display: flex;
+    font-size: 2rem;
+    align-items: center;
+}
+
+nav .logo i {
+    color: var(--mine-color);
+    padding-left: 0.75rem;
+}
+
+nav .links {
+    list-style: none;
+    flex: 1;
+    text-align: center;
+}
+
+nav .links li {
+    display: inline-block;
+    padding: 0 0.5rem;
+}
+
+nav .links li a {
+    text-decoration: none;
+    color: var(--color-link);
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+nav .menue {
+    display: none;
+    font-size: 2rem;
+}
+
+@media (max-width: 1000px) {
+    nav .menue {
+        display: block;
+    }
+
+    nav .links {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: fixed;
+        background-color: rgba(35, 35, 35, 0.862);
+        width: 100%;
+        height: 100vh;
+        left: 0;
+        top: 0;
+    }
+
+    nav .links li {
+        transition: 0.3s;
+    }
+
+    nav .links li:hover {
+        transform: scale(1.2);
+    }
+    
+    nav .links li a {
+        color: #fff;
+        padding: 0.5rem 1rem;
+        display: inline-block;
+        letter-spacing: 3px;
+    }
+}
+
+/* Statr Hero Section */
+
+.hero {
+    background-color: #f8f7fc;
+}
+
+.hero-section {
+    max-width: 1366px;
+    min-height: 90vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:  0 auto;
+    padding: 0 5rem;
+    padding-top: 200px;
+}
+
+.hero-section .content {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-section h4 {
+    color: #6e0aef;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.hero-section h1 {
+    font-size: 2.6rem;
+    margin-bottom: 1rem;
+}
+
+.hero-section p {
+    color: #1d1d1d;
+    font-size: 1.4rem;
+}
+
+.hero-section p span {
+    color: #6e0aef;
+}
+
+.hero-section .btn {
+
+}
+
+.hero-image {
+    padding-right: 40px;
+}
+
+@media (max-width: 1300px) {
+
+    .hero-section .content h4 {
+        font-size: 1.4rem;
+    }
+
+    .hero-section .content h1 {
+        font-size: 2.4rem;
+    }
+
+    .hero-section .content p {
+        font-size: 1.2rem;
+    }
+   
+}
+
+@media (max-width: 1200px) {
+
+    .hero-section {
+        justify-content: center;
+        min-height: 70vh;
+    }
+
+    .hero-section .content {
+        text-align: center;
+    }
+
+    .hero-section .content button {
+        align-self: center ;
+    }
+
+    .hero-section  .hero-image {
+        display: none;
+    }
+   
+}
+
+/* End Hero Section */
+
+/* Start Features Section  */
+
+.features {
+    background-color: #f8f7fc;
+    padding: 2rem 0;
+}
+
+.features .features-content {
+    max-width: 1366px;
+    margin: 0 auto;
+    padding:  0 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.features h4 {
+    color: #6e0aef;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+
+.features .qualities {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.features .qualities .quality {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 2rem;
+    max-width: 17rem;
+    border-radius: 1rem;
+    margin: 0.9rem;
+    transition: 0.3s;
+    border: 2px solid transparent;
+    box-shadow: 0 0 10px #dcdcdc;
+}
+
+.features .qualities .quality:hover {
+    border: 2px solid #6e0aef;
+}
+
+.qualities .quality i {
+    color: #6e0aef;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.qualities .quality h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.qualities .quality p {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #4e4e4e;
+}
+
+@media (max-width: 1300px) {
+
+}
+
+/* End Features Section  */
+
+/* Start Newest Phones */
+
+.newest-phones {
+    padding-top: 5rem
+}
+
+.newest-phones .phones-section {
+    max-width: 1366px;
+    margin: 0 auto;
+    padding: 0 5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.phones-section h4 {
+    color: #6e0aef;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.phones-section .phones {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: flex-start;
+}
+
+@media (max-width: 1000px) {
+    .phones-section {
+        text-align: center;
+    }
+    .phones-section .phones {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 770px) {
+    .phones-section .phones {
+        grid-template-columns: 1fr ;
+    }
+}
+
+.phones .phone {
+    margin: 2rem auto;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.phone img {
+    margin-bottom: 1rem;
+    transition: .3s;
+}
+
+.phone img:hover {
+    cursor: pointer;
+}
+
+.phone h3 {
+    font-size: 1.6rem;
+} 
+
+.phones-section button {
+    width: 15rem;
+    margin-bottom: 1rem;
+    align-self: center;
+}
+
+/* End Newest Phones */
+
+/* Start Footer */
+
+footer {
+    background-color: #f8f7fc;
+    height: 15vh;
+    margin-top: 5rem;
+    padding: 2rem 0;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1366px;
+    margin: 0 auto;
+    padding: 0 5rem;
+}
+
+.footer-section p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-section .socials i {
+    padding: 0 0.5rem;
+    font-size: 1.6rem;
+}
+
+.footer-section .socials i:hover {
+    color: #6e0aef;
+    cursor: pointer;
+}
+
+/* End Footer */
